@@ -1,5 +1,6 @@
 import React from "react";
 import { useRef } from "react";
+import { useState } from "react";
 import classes from "./NewTodo.module.css";
 
 const NewTodo: React.FC<{ onAddTodo: (text: string) => void }> = (props) => {
@@ -14,6 +15,8 @@ const NewTodo: React.FC<{ onAddTodo: (text: string) => void }> = (props) => {
       return;
     }
     props.onAddTodo(enteredText);
+
+    todoTextInputRef.current!.value = "";
   };
 
   return (
