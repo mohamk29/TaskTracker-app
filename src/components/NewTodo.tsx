@@ -24,6 +24,7 @@ const NewTodo: React.FC<{ onAddTodo: (text: string) => void }> = (props) => {
       <label htmlFor="text">Task to complete:</label>
       <input type="text" id="text" ref={todoTextInputRef} />
       <button>Add Task to List</button>
+      <p>Simply tap an item to remove upon completion of task!</p>
     </form>
   );
 };
